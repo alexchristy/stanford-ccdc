@@ -3,18 +3,45 @@ import sys
 import xml.etree.ElementTree as ET
 
 class NetworkService:
-    def __init__(self):
+    def InitDefault(self):
         self.proto = ""
         self.port = 0
-        self.isOpen = False
-        self.serviceName = ""
+        self.is_open = False
+        self.service_name = ""
         self.product = ""
         self.version = ""
         self.description = ""
 
+    # service_root is the port object in the nmap XML
+    def InitXml(self, service_root):
+        self.proto = service_root.attrib.get('protocol', "")
+        self.port = int(service_root.attrib.get('portid', "0"))
+        state = service_root.find('state')
+        if state != None:
+            self.is_open = state.attrib.get('state', "closed") == "open"
+
+        service = service_root.find('service')
+        if service != None:
+            self.service_name = service.attrib.get('name', "None")
+            self.product = service.attrib.get('name', "None")
+            self.version = service.attrib.get('version', "None")
+
+    def __init__(self, service_xml_root=None):
+        self.InitDefault()
+        if service_xml_root != None:
+            self.InitXml(service_xml_root)
+
+    def __repr__(self):
+        return self.__str__()
+
+    def __str__(self):
+        return "Service: " + "{" "Protocol: " + self.proto + ", " + "Port: " + str(self.port) + ", " + \
+            "Is Open: " + str(self.is_open) + ", " + "Name: " + self.service_name + ", " + \
+                "Product: " + self.product + ", " + "Version: " + self.version + "}"
+
 class NetworkElement:
-    def __init__(self):
-        self.isUp = False
+    def InitDefault(self):
+        self.is_up = False
         # Each network element is uniquely determined by
         # it's IP address; if a host has two addresses,
         # we treat them as separate.
@@ -24,6 +51,26 @@ class NetworkElement:
         self.hostnames = []
         self.description = ""
         self.network = ""
+
+    # host_root corresponds to the host XML element
+    def InitXml(self, host_root):
+        address = host_root.find('address')
+        self.addr = address.attrib.get('addr', "")
+        self.addrtype = address.attrib.get('addrtype', "")
+        status = host_root.find('status')
+        self.status = status.attrib.get('state', "")
+        # TODO: Verify
+        self.hostnames = [hn.attrib.get('name', "") for hn in host_root.find('hostnames')]
+
+        for service in host_root.find('ports').findall('port'):
+            new_service = NetworkService(service)
+            self.services.append(new_service)
+        print (self.addr, self.hostnames, self.services)
+
+    def __init__(self, host_root=None):
+        self.InitDefault()
+        if host_root != None:
+            self.InitXml(host_root)
 
     def getServiceByPort(self, port_num, proto):
         # Should only be one (port, service) per network element, but
@@ -45,16 +92,14 @@ class NetworkElement:
 def parse_file(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
-    print (root)
-    for child in root:
-        print (child.tag, child.attrib)
-    hosts = root.findall("host")
-    for host in hosts:
-        address_obj = host.findall('address')[0]
-        print (host.tag, address_obj.tag, address_obj.attrib)
+    elements = []
+    for host in root.findall('host'):
+        network_element = NetworkElement(host)
+        elements.append(network_element)
+    return elements
 
 
 # Main only for testing
 if __name__ == '__main__':
     filename = sys.argv[1]
-    parse_file(filename)
+    elements = parse_file(filename)
