@@ -1,9 +1,32 @@
 import os
 import sys
+import ipaddress as ip
 import xml.etree.ElementTree as ET
 
+class NetworkAddress:
+    def __init__(self, addr_str, subnet, gateway, addr_type):
+        # Here we use ipaddress' interface object,
+        # as it contains both the address and netmask
+        interface_str = addr_str + "/" + subnet
+        if addr_type == "ipv4":
+            self.interface = ip.IPv4Interface(interface_str)
+        else:
+            self.interface = ip.IPv6Interface(interface_str)
+        self.gateway = ip.ip_address(gateway)
+
+    def __repr__(self):
+        return str(self)
+
+    def __str__(self):
+        return self.interface.with_prefixlen
+
 class NetworkService:
-    def InitDefault(self):
+    def __init__(self, service_xml_root=None):
+        self.initDefault()
+        if service_xml_root != None:
+            self.initXml(service_xml_root)
+
+    def initDefault(self):
         self.proto = ""
         self.port = 0
         self.is_open = False
@@ -13,7 +36,7 @@ class NetworkService:
         self.description = ""
 
     # service_root is the port object in the nmap XML
-    def InitXml(self, service_root):
+    def initXml(self, service_root):
         self.proto = service_root.attrib.get('protocol', "")
         self.port = int(service_root.attrib.get('portid', "0"))
         state = service_root.find('state')
@@ -26,11 +49,6 @@ class NetworkService:
             self.product = service.attrib.get('name', "None")
             self.version = service.attrib.get('version', "None")
 
-    def __init__(self, service_xml_root=None):
-        self.InitDefault()
-        if service_xml_root != None:
-            self.InitXml(service_xml_root)
-
     def __repr__(self):
         return self.__str__()
 
@@ -40,12 +58,13 @@ class NetworkService:
                 "Product: " + self.product + ", " + "Version: " + self.version + "}"
 
 class NetworkElement:
-    def InitDefault(self):
+    def initDefault(self):
         self.is_up = False
         # Each network element is uniquely determined by
         # it's IP address; if a host has two addresses,
         # we treat them as separate.
-        self.addr = ""
+
+        self.network_config = None
         self.os = ""
         self.services = []
         self.hostnames = []
@@ -53,10 +72,13 @@ class NetworkElement:
         self.network = ""
 
     # host_root corresponds to the host XML element
-    def InitXml(self, host_root):
+    def initXml(self, host_root):
         address = host_root.find('address')
-        self.addr = address.attrib.get('addr', "")
-        self.addrtype = address.attrib.get('addrtype', "")
+        # TODO: Consider failure case
+        addr_str = address.attrib.get('addr', "")
+        addrtype = address.attrib.get('addrtype', "")
+        # TODO: Fix gateway
+        self.network_config = NetworkAddress(addr_str, "255.255.255.0", "192.168.1.1", addrtype)
         status = host_root.find('status')
         self.status = status.attrib.get('state', "")
         # TODO: Verify
@@ -65,12 +87,11 @@ class NetworkElement:
         for service in host_root.find('ports').findall('port'):
             new_service = NetworkService(service)
             self.services.append(new_service)
-        print (self.addr, self.hostnames, self.services)
 
     def __init__(self, host_root=None):
-        self.InitDefault()
+        self.initDefault()
         if host_root != None:
-            self.InitXml(host_root)
+            self.initXml(host_root)
 
     def getServiceByPort(self, port_num, proto):
         # Should only be one (port, service) per network element, but
@@ -87,6 +108,30 @@ class NetworkElement:
             if service.serviceName == service_name:
                 service_list.append(service)
         return service_list
+
+    # Providing a list of service_names filters the results to only include
+    # open ports with the corresponding service
+    def getAllOpenServices(self, service_names=None):
+        service_list = []
+        for service in self.services:
+            if service.is_open:
+                if service_names == None or service.name in service_names:
+                    service_list.append(service)
+        return service_list
+
+    def getSubnet(self):
+        return self.network_config.interface.network
+
+    # TODO: Unimplemented
+    def isGateway(self):
+        return False
+
+    # TODO: Fix this
+    def makeEntry(self):
+        hostnames = "\n".join(name for name in self.hostnames)
+        services = "\n".join(self.getServiceByName("ssh"))
+        entry = "\n".join([hostnames, str(self.network_config), self.os, services])
+        return entry
 
 # Exported function
 def parse_file(filename):
