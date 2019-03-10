@@ -131,9 +131,9 @@ class NetworkElement:
     def isGateway(self):
         return False
 
-    # TODO: Add services
+    # TODO: Add services / failure case for missing hostname/os.
     def makeEntry(self):
-        return "\n".join([self.hostnames[0], self.getAddress()])
+        return "\n".join([self.hostnames[0], self.getAddress(), self.os])
 
 # Exported function
 def parse_file(filename):
