@@ -78,7 +78,7 @@ class NetworkElement:
         addr_str = address.attrib.get('addr', "")
         addrtype = address.attrib.get('addrtype', "")
         # TODO: Fix gateway
-        self.network_config = NetworkAddress(addr_str, "255.255.255.0", "192.168.1.1", addrtype)
+        self.network_config = NetworkAddress(addr_str, u"255.255.255.0", u"192.168.1.1", addrtype)
         status = host_root.find('status')
         self.status = status.attrib.get('state', "")
         # TODO: Verify
@@ -119,6 +119,11 @@ class NetworkElement:
                     service_list.append(service)
         return service_list
 
+    # Returns stringified version of IP, stripped of subnet specification
+    def getAddress(self):
+        return str(self.network_config.interface)[:-3]
+
+    # Returns ipv4 object of subnet
     def getSubnet(self):
         return self.network_config.interface.network
 
@@ -126,12 +131,9 @@ class NetworkElement:
     def isGateway(self):
         return False
 
-    # TODO: Fix this
+    # TODO: Add services
     def makeEntry(self):
-        hostnames = "\n".join(name for name in self.hostnames)
-        services = "\n".join(self.getServiceByName("ssh"))
-        entry = "\n".join([hostnames, str(self.network_config), self.os, services])
-        return entry
+        return "\n".join([self.hostnames[0], self.getAddress()])
 
 # Exported function
 def parse_file(filename):
