@@ -1,0 +1,61 @@
+Private Networks & Common Ports
+
+Private IP Address Ranges
+CIDR block (subnet mask)
+# of addresses
+10.0.0.0 – 10.255.255.255
+10.0.0.0/8 (255.0.0.0)
+16777216
+172.16.0.0 – 172.31.255.255
+172.16.0.0/12 (255.240.0.0)
+1048576
+192.168.0.0 – 192.168.255.255
+192.168.0.0/16 (255.255.0.0)
+65536
+
+Ports 0-1023: Well-Known Ports * Ports 1024-49151: Registered Ports * Ports 49152-65535: Public/Unassigned
+
+20/tcp FTP - data port (FTP-d)
+143/tcp IMAP4 (Internet Message Access Protocol)
+21/tcp FTP - control (command) port 
+161/tcp,udp SNMP (Simple Network Management Protocol)
+22/tcp SSH (Secure Shell) - used for secure logins, file transfers (scp, sftp) and port forwarding
+389/tcp LDAP (Lightweight Directory Access Protocol)
+23/tcp  Telnet
+443/tcp HTTPS - HTTP Protocol over TLS/SSL (encrypted)
+25/tcp SMTP (Simple Mail Transport Protocol) 
+445/tcp,udp Microsoft File Sharing & Active Directory
+53/udp,tcp DNS (Domain Name System)
+465/tcp SMTP over SSL 
+68/udp DHCP (Dynamic Host Configuration Protocol)
+636/tcp,udp LDAP over SSL (encrypted)
+69/tcp,udp TFTP (Trivial File Transfer Protocol)
+902 VMware Server
+80/tcp HTTP (HyperText Transfer Protocol)
+3389/tcp RDP (Remote Desktop Protocol - Windows)
+88/tcp Kerberos authentication
+4444/tcp Netcat (ncat) default
+110/tcp POP3 (Post Office Protocol version 3) 
+5900-5901/tcp VNC Server
+135/tcp  Microsoft RPC Locator Service
+5938/tcp Teamviewer
+137-137/tcp NetBIOS (legacy Windows file sharing and auth)
+8080-8081/tcp Commonly used for HTTP/HTTPS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
