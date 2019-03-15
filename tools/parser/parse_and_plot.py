@@ -142,10 +142,11 @@ class NetworkElement:
     def isGateway(self):
         return False
 
-    def makeEntry(self):
+    def makeEntry(self, includeServices = False):
         service_str = ""
-        for service in self.getAllOpenServices(None):
-            service_str += str(service.port) + ": " + service.service_name + "\n"
+        if includeServices:
+            for service in self.getAllOpenServices(None):
+                service_str += str(service.port) + ": " + service.service_name + "\n"
         
         return "\n".join([self.hostnames[0], self.getAddress(), self.os, service_str])
 
@@ -196,13 +197,16 @@ class NetworkGraph(Graph):
     def __init__(self, netDict):
         Graph.__init__(self)
         self.networkDict = netDict
+        self.attr('node', fontname = "helvetica")
 
     def graphNetwork(self, output_name="graph"):
         self.attr(splines = 'ortho')
         for subnet in self.networkDict:
-            self.attr('node', shape='ellipse')
+            boxw = 2.8
+            netw = len(self.networkDict[subnet])*1.1*boxw
+            self.attr('node', shape='oval', color="gray", fontcolor="white", style="filled", fixedsize = "shape", width = str(netw), height = "0.8")
             self.node(subnet, 'Subnet: '+subnet)
-            self.attr('node', shape='box')
+            self.attr('node', shape='box', color="lightblue", fontcolor="black", style="filled", fixedsize = "shape", width = str(boxw), height = "1.3")
 
             i = 0
             for box in self.networkDict[subnet]:
