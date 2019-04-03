@@ -1,7 +1,7 @@
 from graphviz import *
 from ipaddress import *
-import nmap_parser
-from nmap_parser import NetworkElement
+import network
+from network import NetworkElement
 
 
 # This class contains both an unordered list of NetworkElements

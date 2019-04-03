@@ -3,23 +3,6 @@ import sys
 import ipaddress as ip
 import xml.etree.ElementTree as ET
 
-class NetworkAddress:
-    def __init__(self, addr_str, subnet, gateway, addr_type):
-        # Here we use ipaddress' interface object,
-        # as it contains both the address and netmask
-        interface_str = addr_str + "/" + subnet
-        if addr_type == "ipv4":
-            self.interface = ip.IPv4Interface(interface_str)
-        else:
-            self.interface = ip.IPv6Interface(interface_str)
-        self.gateway = ip.ip_address(gateway)
-
-    def __repr__(self):
-        return str(self)
-
-    def __str__(self):
-        return self.interface.with_prefixlen
-
 class NetworkService:
     def __init__(self, service_xml_root=None):
         self.initDefault()
@@ -58,27 +41,31 @@ class NetworkService:
                 "Product: " + self.product + ", " + "Version: " + self.version + "}"
 
 class NetworkElement:
+    def __init__(self, host_root=None, netmask="255.255.255.0", gateway=False):
+        self.initDefault()
+        if host_root != None:
+            self.initXml(host_root, netmask, gateway)
+
     def initDefault(self):
         self.is_up = False
         # Each network element is uniquely determined by
         # it's IP address; if a host has two addresses,
         # we treat them as separate.
 
+        self.network_interface = ip.ip_interface("0.0.0.0/0")
+        self.gateway = False
         self.network_config = None
         self.os = ""
         self.services = []
         self.hostnames = []
         self.description = ""
-        self.network = ""
 
     # host_root corresponds to the host XML element
-    def initXml(self, host_root):
+    def initXml(self, host_root, netmask, gateway):
         address = host_root.find('address')
         # TODO: Consider failure case
         addr_str = address.attrib.get('addr', "")
-        addrtype = address.attrib.get('addrtype', "")
-        # TODO: Fix gateway
-        self.network_config = NetworkAddress(addr_str, u"255.255.255.0", u"192.168.1.1", addrtype)
+        self.network_config = ip.ip_interface(addr_str + "/" + netmask)
         status = host_root.find('status')
         self.status = status.attrib.get('state', "")
         # TODO: Verify
@@ -87,11 +74,6 @@ class NetworkElement:
         for service in host_root.find('ports').findall('port'):
             new_service = NetworkService(service)
             self.services.append(new_service)
-
-    def __init__(self, host_root=None):
-        self.initDefault()
-        if host_root != None:
-            self.initXml(host_root)
 
     def getServiceByPort(self, port_num, proto):
         # Should only be one (port, service) per network element, but
@@ -121,19 +103,75 @@ class NetworkElement:
 
     # Returns stringified version of IP, stripped of subnet specification
     def getAddress(self):
-        return str(self.network_config.interface)[:-3]
+        return str(self.network_interface)[:-3]
+
+    def getNetwork(self):
+        return self.network_interface.network
 
     # Returns ipv4 object of subnet
     def getSubnet(self):
-        return self.network_config.interface.network
+        return self.network_interface.network
 
-    # TODO: Unimplemented
     def isGateway(self):
-        return False
+        return self.gateway
 
-    # TODO: Add services / failure case for missing hostname/os.
+    def setGateway(self, gateway):
+        self.gateway = gateway
+
     def makeEntry(self):
-        return "\n".join([self.hostnames[0], self.getAddress(), self.os])
+        hostname_list = ""
+        for i, hostname in enumerate(self.hostnames):
+            hostname_list += hostname
+            if i < len(self.hostnames) - 1:
+                hostname_list += ","
+        return "\n".join([hostname_list, self.getAddress(), self.os])
+
+# A single logical network. We assume this network to use either contiguous
+# addresses (e.g. 10.0.0.10-10.0.255.255) or CIDR notation (e.g. 10.0.0.0/24)
+# Does not support non-contiguous networks.
+class Network:
+    # We force address and netmask arguments here to be strings
+    # Defaults to be the "all" address address (0.0.0.0/0)
+    def __init__(self, address="0.0.0.0", netmask="0"):
+        self.hosts = []
+        self.set_network(address, netmask)
+
+    # Assumes arguments are strings
+    # If no arguments are provided, equivalent to giving an address of
+    # 0.0.0.0/0.
+    def set_network(self, address="0.0.0.0", netmask="0"):
+        new_network = ip.ip_network(address + "/" + netmask)
+
+        # Make sure this new network works with all hosts
+        for host in self.hosts:
+            if not self._check_valid_host(host, new_network):
+                return False
+
+        # If no errors, set new network
+        self.network = new_network
+        return True
+
+    def get_network(self):
+        return self.network
+
+    def get_hosts(self):
+        return self.hosts
+
+    # Returns an error if the element is not in this network
+    def add_element(self, network_element):
+        if not self._check_valid_host(network_element, self.network):
+            return False
+        self.hosts.append(network_element)
+        return True
+
+    def _check_valid_host(self, host, network):
+        host_network = host.getNetwork()
+        # Trivially true if the network is none
+        if host_network is None:
+            return True
+        if network.supernet_of(host_network) != 0:
+            return False
+        return True
 
 # Exported function
 def parse_file(filename):
