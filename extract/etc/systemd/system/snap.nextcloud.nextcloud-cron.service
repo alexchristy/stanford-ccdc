@@ -1,0 +1,19 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application nextcloud.nextcloud-cron
+Requires=snap-nextcloud-33908.mount
+Wants=network.target
+After=snap-nextcloud-33908.mount network.target snapd.apparmor.service
+X-Snappy=yes
+
+[Service]
+EnvironmentFile=-/etc/environment
+ExecStart=/usr/bin/snap run nextcloud.nextcloud-cron
+SyslogIdentifier=nextcloud.nextcloud-cron
+Restart=on-failure
+WorkingDirectory=/var/snap/nextcloud/33908
+TimeoutStopSec=30
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

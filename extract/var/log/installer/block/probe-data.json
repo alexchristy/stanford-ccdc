@@ -1,0 +1,423 @@
+{
+    "dmcrypt": {},
+    "lvm": {},
+    "raid": {},
+    "blockdev": {
+        "/dev/sda": {
+            "DEVLINKS": "/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0",
+            "DEVNAME": "/dev/sda",
+            "DEVPATH": "/devices/pci0000:00/0000:00:10.0/host32/target32:0:0/32:0:0:0/block/sda",
+            "DEVTYPE": "disk",
+            "DISKSEQ": "9",
+            "DM_MULTIPATH_DEVICE_PATH": "0",
+            "ID_BUS": "scsi",
+            "ID_MODEL": "Virtual_disk",
+            "ID_MODEL_ENC": "Virtual\\x20disk\\x20\\x20\\x20\\x20",
+            "ID_PATH": "pci-0000:00:10.0-scsi-0:0:0:0",
+            "ID_PATH_TAG": "pci-0000_00_10_0-scsi-0_0_0_0",
+            "ID_REVISION": "2.0",
+            "ID_SCSI": "1",
+            "ID_SCSI_INQUIRY": "1",
+            "ID_TYPE": "disk",
+            "ID_VENDOR": "VMware",
+            "ID_VENDOR_ENC": "VMware\\x20\\x20",
+            "MAJOR": "8",
+            "MINOR": "0",
+            "MPATH_SBIN_PATH": "/sbin",
+            "SCSI_MODEL": "Virtual_disk",
+            "SCSI_MODEL_ENC": "Virtual\\x20disk\\x20\\x20\\x20\\x20",
+            "SCSI_REVISION": "2.0",
+            "SCSI_TPGS": "0",
+            "SCSI_TYPE": "disk",
+            "SCSI_VENDOR": "VMware",
+            "SCSI_VENDOR_ENC": "VMware\\x20\\x20",
+            "SUBSYSTEM": "block",
+            "TAGS": ":systemd:",
+            "USEC_INITIALIZED": "3658948",
+            "attrs": {
+                "alignment_offset": "0",
+                "bdi": null,
+                "capability": "40",
+                "dev": "8:0",
+                "device": null,
+                "discard_alignment": "0",
+                "diskseq": "9",
+                "events": "",
+                "events_async": "",
+                "events_poll_msecs": "-1",
+                "ext_range": "256",
+                "hidden": "0",
+                "inflight": "       0        0",
+                "range": "16",
+                "removable": "0",
+                "ro": "0",
+                "size": "34359738368",
+                "stat": "     430        0    18216       52        0        0        0        0        0      184       52        0        0        0        0        0        0",
+                "subsystem": "block",
+                "uevent": "MAJOR=8\nMINOR=0\nDEVNAME=sda\nDEVTYPE=disk\nDISKSEQ=9"
+            }
+        },
+        "/dev/sr0": {
+            "DEVLINKS": "/dev/disk/by-path/pci-0000:02:03.0-ata-1 /dev/disk/by-label/Ubuntu-Server\\x2022.04.2\\x20LTS\\x20amd64 /dev/disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_00000000000000000001 /dev/disk/by-uuid/2023-02-17-21-57-15-00 /dev/cdrom /dev/disk/by-path/pci-0000:02:03.0-ata-1.0",
+            "DEVNAME": "/dev/sr0",
+            "DEVPATH": "/devices/pci0000:00/0000:00:11.0/0000:02:03.0/ata3/host2/target2:0:0/2:0:0:0/block/sr0",
+            "DEVTYPE": "disk",
+            "DISKSEQ": "11",
+            "ID_ATA": "1",
+            "ID_ATA_FEATURE_SET_PM": "1",
+            "ID_ATA_FEATURE_SET_PM_ENABLED": "1",
+            "ID_BUS": "ata",
+            "ID_CDROM": "1",
+            "ID_CDROM_CD_R": "1",
+            "ID_CDROM_CD_RW": "1",
+            "ID_CDROM_DVD": "1",
+            "ID_CDROM_DVD_R": "1",
+            "ID_CDROM_DVD_RAM": "1",
+            "ID_CDROM_MEDIA": "1",
+            "ID_CDROM_MEDIA_DVD": "1",
+            "ID_CDROM_MEDIA_SESSION_COUNT": "1",
+            "ID_CDROM_MEDIA_STATE": "complete",
+            "ID_CDROM_MEDIA_TRACK_COUNT": "1",
+            "ID_CDROM_MEDIA_TRACK_COUNT_DATA": "1",
+            "ID_CDROM_MRW": "1",
+            "ID_CDROM_MRW_W": "1",
+            "ID_FOR_SEAT": "block-pci-0000_02_03_0-ata-1_0",
+            "ID_FS_BOOT_SYSTEM_ID": "EL\\x20TORITO\\x20SPECIFICATION",
+            "ID_FS_DATA_PREPARER_ID": "XORRISO-1.5.2\\x202019.10.26.180001\\x2c\\x20LIBISOBURN-1.5.2\\x2c\\x20LIBISOFS-1.5.2\\x2c\\x20LIBBURN-1.5.2",
+            "ID_FS_LABEL": "Ubuntu-Server_22.04.2_LTS_amd64",
+            "ID_FS_LABEL_ENC": "Ubuntu-Server\\x2022.04.2\\x20LTS\\x20amd64",
+            "ID_FS_TYPE": "iso9660",
+            "ID_FS_USAGE": "filesystem",
+            "ID_FS_UUID": "2023-02-17-21-57-15-00",
+            "ID_FS_UUID_ENC": "2023-02-17-21-57-15-00",
+            "ID_FS_VERSION": "Joliet Extension",
+            "ID_MODEL": "VMware_Virtual_SATA_CDRW_Drive",
+            "ID_MODEL_ENC": "VMware\\x20Virtual\\x20SATA\\x20CDRW\\x20Drive\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20\\x20",
+            "ID_PART_TABLE_TYPE": "PMBR",
+            "ID_PATH": "pci-0000:02:03.0-ata-1.0",
+            "ID_PATH_ATA_COMPAT": "pci-0000:02:03.0-ata-1",
+            "ID_PATH_TAG": "pci-0000_02_03_0-ata-1_0",
+            "ID_REVISION": "00000001",
+            "ID_SCSI": "1",
+            "ID_SCSI_INQUIRY": "1",
+            "ID_SERIAL": "VMware_Virtual_SATA_CDRW_Drive_00000000000000000001",
+            "ID_SERIAL_SHORT": "00000000000000000001",
+            "ID_TYPE": "cd",
+            "ID_VENDOR": "NECVMWar",
+            "ID_VENDOR_ENC": "NECVMWar",
+            "MAJOR": "11",
+            "MINOR": "0",
+            "SCSI_MODEL": "VMware_SATA_CD00",
+            "SCSI_MODEL_ENC": "VMware\\x20SATA\\x20CD00",
+            "SCSI_REVISION": "1.00",
+            "SCSI_TPGS": "0",
+            "SCSI_TYPE": "cd/dvd",
+            "SCSI_VENDOR": "NECVMWar",
+            "SCSI_VENDOR_ENC": "NECVMWar",
+            "SUBSYSTEM": "block",
+            "TAGS": ":uaccess:seat:systemd:",
+            "USEC_INITIALIZED": "3769136",
+            "attrs": {
+                "alignment_offset": "0",
+                "bdi": null,
+                "capability": "109",
+                "dev": "11:0",
+                "device": null,
+                "discard_alignment": "0",
+                "diskseq": "11",
+                "events": "media_change eject_request",
+                "events_async": "",
+                "events_poll_msecs": "-1",
+                "ext_range": "1",
+                "hidden": "0",
+                "inflight": "       1        0",
+                "range": "1",
+                "removable": "1",
+                "ro": "0",
+                "size": "1975971840",
+                "stat": "    4215      103   498345    38026        0        0        0        0        1    24916    38026        0        0        0        0        0        0",
+                "subsystem": "block",
+                "uevent": "MAJOR=11\nMINOR=0\nDEVNAME=sr0\nDEVTYPE=disk\nDISKSEQ=11"
+            },
+            "partitiontable": {
+                "label": "dos",
+                "id": "0x00000000",
+                "device": "/dev/sr0",
+                "unit": "sectors",
+                "sectorsize": 2048,
+                "partitions": [
+                    {
+                        "node": "/dev/sr0p1",
+                        "start": 1,
+                        "size": 964829,
+                        "type": "ee"
+                    },
+                    {
+                        "node": "/dev/sr0p2",
+                        "start": 0,
+                        "size": 1,
+                        "type": "0",
+                        "bootable": true
+                    }
+                ]
+            }
+        }
+    },
+    "zfs": {
+        "zpools": {}
+    },
+    "dasd": {},
+    "multipath": {},
+    "bcache": {
+        "backing": {},
+        "caching": {}
+    },
+    "filesystem": {
+        "/dev/sr0": {
+            "BOOT_SYSTEM_ID": "EL\\x20TORITO\\x20SPECIFICATION",
+            "DATA_PREPARER_ID": "XORRISO-1.5.2\\x202019.10.26.180001\\x2c\\x20LIBISOBURN-1.5.2\\x2c\\x20LIBISOFS-1.5.2\\x2c\\x20LIBBURN-1.5.2",
+            "LABEL": "Ubuntu-Server_22.04.2_LTS_amd64",
+            "LABEL_ENC": "Ubuntu-Server\\x2022.04.2\\x20LTS\\x20amd64",
+            "TYPE": "iso9660",
+            "USAGE": "filesystem",
+            "UUID": "2023-02-17-21-57-15-00",
+            "UUID_ENC": "2023-02-17-21-57-15-00",
+            "VERSION": "Joliet Extension",
+            "ESTIMATED_MIN_SIZE": -1
+        }
+    },
+    "mount": [
+        {
+            "target": "/",
+            "source": "/cow",
+            "fstype": "overlay",
+            "options": "rw,relatime,lowerdir=/ubuntu-server-minimal.ubuntu-server.installer.generic.squashfs:/ubuntu-server-minimal.ubuntu-server.installer.squashfs:/ubuntu-server-minimal.ubuntu-server.squashfs:/ubuntu-server-minimal.squashfs,upperdir=/cow/upper,workdir=/cow/work,xino=off",
+            "children": [
+                {
+                    "target": "/sys",
+                    "source": "sysfs",
+                    "fstype": "sysfs",
+                    "options": "rw,nosuid,nodev,noexec,relatime",
+                    "children": [
+                        {
+                            "target": "/sys/kernel/security",
+                            "source": "securityfs",
+                            "fstype": "securityfs",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/sys/fs/cgroup",
+                            "source": "cgroup2",
+                            "fstype": "cgroup2",
+                            "options": "rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot"
+                        },
+                        {
+                            "target": "/sys/fs/pstore",
+                            "source": "pstore",
+                            "fstype": "pstore",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/sys/fs/bpf",
+                            "source": "bpf",
+                            "fstype": "bpf",
+                            "options": "rw,nosuid,nodev,noexec,relatime,mode=700"
+                        },
+                        {
+                            "target": "/sys/kernel/debug",
+                            "source": "debugfs",
+                            "fstype": "debugfs",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/sys/kernel/tracing",
+                            "source": "tracefs",
+                            "fstype": "tracefs",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/sys/fs/fuse/connections",
+                            "source": "fusectl",
+                            "fstype": "fusectl",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/sys/kernel/config",
+                            "source": "configfs",
+                            "fstype": "configfs",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        }
+                    ]
+                },
+                {
+                    "target": "/proc",
+                    "source": "proc",
+                    "fstype": "proc",
+                    "options": "rw,nosuid,nodev,noexec,relatime",
+                    "children": [
+                        {
+                            "target": "/proc/sys/fs/binfmt_misc",
+                            "source": "systemd-1",
+                            "fstype": "autofs",
+                            "options": "rw,relatime,fd=29,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=14925",
+                            "children": [
+                                {
+                                    "target": "/proc/sys/fs/binfmt_misc",
+                                    "source": "binfmt_misc",
+                                    "fstype": "binfmt_misc",
+                                    "options": "rw,nosuid,nodev,noexec,relatime"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "target": "/dev",
+                    "source": "udev",
+                    "fstype": "devtmpfs",
+                    "options": "rw,nosuid,relatime,size=1951264k,nr_inodes=487816,mode=755,inode64",
+                    "children": [
+                        {
+                            "target": "/dev/pts",
+                            "source": "devpts",
+                            "fstype": "devpts",
+                            "options": "rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000"
+                        },
+                        {
+                            "target": "/dev/shm",
+                            "source": "tmpfs",
+                            "fstype": "tmpfs",
+                            "options": "rw,nosuid,nodev,inode64"
+                        },
+                        {
+                            "target": "/dev/mqueue",
+                            "source": "mqueue",
+                            "fstype": "mqueue",
+                            "options": "rw,nosuid,nodev,noexec,relatime"
+                        },
+                        {
+                            "target": "/dev/hugepages",
+                            "source": "hugetlbfs",
+                            "fstype": "hugetlbfs",
+                            "options": "rw,relatime,pagesize=2M"
+                        }
+                    ]
+                },
+                {
+                    "target": "/run",
+                    "source": "tmpfs",
+                    "fstype": "tmpfs",
+                    "options": "rw,nosuid,nodev,noexec,relatime,size=401840k,mode=755,inode64",
+                    "children": [
+                        {
+                            "target": "/run/lock",
+                            "source": "tmpfs",
+                            "fstype": "tmpfs",
+                            "options": "rw,nosuid,nodev,noexec,relatime,size=5120k,inode64"
+                        },
+                        {
+                            "target": "/run/credentials/systemd-sysusers.service",
+                            "source": "none",
+                            "fstype": "ramfs",
+                            "options": "ro,nosuid,nodev,noexec,relatime,mode=700"
+                        },
+                        {
+                            "target": "/run/snapd/ns",
+                            "source": "tmpfs[/snapd/ns]",
+                            "fstype": "tmpfs",
+                            "options": "rw,nosuid,nodev,noexec,relatime,size=401840k,mode=755,inode64",
+                            "children": [
+                                {
+                                    "target": "/run/snapd/ns/lxd.mnt",
+                                    "source": "nsfs[mnt:[4026532593]]",
+                                    "fstype": "nsfs",
+                                    "options": "rw"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "target": "/cdrom",
+                    "source": "/dev/sr0",
+                    "fstype": "iso9660",
+                    "options": "ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8"
+                },
+                {
+                    "target": "/rofs",
+                    "source": "/dev/loop0",
+                    "fstype": "squashfs",
+                    "options": "ro,noatime,errors=continue"
+                },
+                {
+                    "target": "/media/minimal",
+                    "source": "/dev/loop4",
+                    "fstype": "squashfs",
+                    "options": "ro,relatime,errors=continue"
+                },
+                {
+                    "target": "/media/full",
+                    "source": "/dev/loop5",
+                    "fstype": "squashfs",
+                    "options": "ro,relatime,errors=continue"
+                },
+                {
+                    "target": "/media/filesystem",
+                    "source": "overlay",
+                    "fstype": "overlay",
+                    "options": "ro,relatime,lowerdir=/root/media/full:/root/media/minimal"
+                },
+                {
+                    "target": "/snap/lxd/24322",
+                    "source": "/dev/loop6",
+                    "fstype": "squashfs",
+                    "options": "ro,nodev,relatime,errors=continue"
+                },
+                {
+                    "target": "/snap/snapd/18357",
+                    "source": "/dev/loop9",
+                    "fstype": "squashfs",
+                    "options": "ro,nodev,relatime,errors=continue"
+                },
+                {
+                    "target": "/tmp",
+                    "source": "tmpfs",
+                    "fstype": "tmpfs",
+                    "options": "rw,nosuid,nodev,relatime,inode64",
+                    "children": [
+                        {
+                            "target": "/tmp/tmpp6fpxbj1/ubuntu-server-minimal.squashfs.dir",
+                            "source": "/dev/loop4",
+                            "fstype": "squashfs",
+                            "options": "ro,relatime,errors=continue"
+                        },
+                        {
+                            "target": "/tmp/tmpp6fpxbj1/ubuntu-server-minimal.ubuntu-server.squashfs.dir",
+                            "source": "/dev/loop1",
+                            "fstype": "squashfs",
+                            "options": "ro,relatime,errors=continue"
+                        },
+                        {
+                            "target": "/tmp/tmpp6fpxbj1/root.dir",
+                            "source": "overlay",
+                            "fstype": "overlay",
+                            "options": "ro,relatime,lowerdir=/tmp/tmpp6fpxbj1/ubuntu-server-minimal.ubuntu-server.squashfs.dir:/tmp/tmpp6fpxbj1/ubuntu-server-minimal.squashfs.dir"
+                        }
+                    ]
+                },
+                {
+                    "target": "/snap/subiquity/4380",
+                    "source": "/dev/loop8",
+                    "fstype": "squashfs",
+                    "options": "ro,nodev,relatime,errors=continue"
+                },
+                {
+                    "target": "/snap/core20/1822",
+                    "source": "/dev/loop7",
+                    "fstype": "squashfs",
+                    "options": "ro,nodev,relatime,errors=continue"
+                }
+            ]
+        }
+    ]
+}

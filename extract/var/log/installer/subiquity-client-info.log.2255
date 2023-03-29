@@ -1,0 +1,38 @@
+2023-03-28 15:24:58,842 INFO subiquity:126 Starting Subiquity revision 4380
+2023-03-28 15:24:58,842 INFO subiquity:127 Arguments passed: ['/snap/subiquity/4380/usr/bin/subiquity']
+2023-03-28 15:25:27,020 INFO subiquity/Serial:107 start: starting UI
+2023-03-28 15:25:27,020 INFO subiquity/Serial:112 finish: (skipped) SUCCESS
+2023-03-28 15:25:27,021 INFO subiquity/Welcome:107 start: starting UI
+2023-03-28 15:25:28,971 INFO subiquity/Welcome:112 finish: completed SUCCESS
+2023-03-28 15:25:28,971 INFO subiquity/Refresh:107 start: starting UI
+2023-03-28 15:25:28,973 INFO subiquity/Refresh:112 finish: (skipped) SUCCESS
+2023-03-28 15:25:28,973 INFO subiquity/Keyboard:107 start: starting UI
+2023-03-28 15:25:29,216 INFO subiquity/Keyboard:112 finish: completed SUCCESS
+2023-03-28 15:25:29,217 INFO subiquity/Source:107 start: starting UI
+2023-03-28 15:25:30,840 INFO subiquity/Source:112 finish: completed SUCCESS
+2023-03-28 15:25:30,840 INFO subiquity/Zdev:107 start: starting UI
+2023-03-28 15:25:30,843 INFO subiquity/Zdev:112 finish: (skipped) SUCCESS
+2023-03-28 15:25:30,843 INFO subiquity/Network:107 start: starting UI
+2023-03-28 15:25:30,889 INFO aiohttp.access:233  [28/Mar/2023:15:25:30 +0000] "POST /route_watch?routes=%5B%5D HTTP/1.1" 200 174 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:32,302 INFO aiohttp.access:233  [28/Mar/2023:15:25:32 +0000] "POST /update_link?act=%22CHANGE%22 HTTP/1.1" 200 174 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:33,891 INFO subiquity/Network:112 finish: completed SUCCESS
+2023-03-28 15:25:33,891 INFO subiquity/Proxy:107 start: starting UI
+2023-03-28 15:25:35,099 INFO subiquity/Proxy:112 finish: completed SUCCESS
+2023-03-28 15:25:35,099 INFO subiquity/Mirror:107 start: starting UI
+2023-03-28 15:25:35,754 INFO subiquity/Mirror:112 finish: completed SUCCESS
+2023-03-28 15:25:35,754 INFO subiquity/Refresh:107 start: starting UI
+2023-03-28 15:25:37,879 INFO subiquity/Refresh:112 finish: completed SUCCESS
+2023-03-28 15:25:37,879 INFO subiquity/Filesystem:107 start: starting UI
+2023-03-28 15:25:43,883 INFO subiquity/Filesystem:112 finish: completed SUCCESS
+2023-03-28 15:25:43,884 INFO subiquity/Identity:107 start: starting UI
+2023-03-28 15:25:46,185 INFO subiquity/Identity:107 start: starting UI
+2023-03-28 15:26:20,523 INFO subiquity/Identity:112 finish: completed SUCCESS
+2023-03-28 15:26:20,523 INFO subiquity/UbuntuPro:107 start: starting UI
+2023-03-28 15:26:23,366 INFO subiquity/UbuntuPro:112 finish: completed SUCCESS
+2023-03-28 15:26:23,367 INFO subiquity/SSH:107 start: starting UI
+2023-03-28 15:26:28,383 INFO subiquity/SSH:112 finish: completed SUCCESS
+2023-03-28 15:26:28,383 INFO subiquity/Drivers:107 start: starting UI
+2023-03-28 15:26:28,385 INFO subiquity/Drivers:112 finish: (skipped) SUCCESS
+2023-03-28 15:26:28,385 INFO subiquity/SnapList:107 start: starting UI
+2023-03-28 15:26:28,390 INFO subiquity/SnapList:112 finish: (skipped) SUCCESS
+2023-03-28 15:26:28,391 INFO subiquity/Progress:107 start: starting UI

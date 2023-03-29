@@ -1,0 +1,13 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Timer logrotate for snap application nextcloud.logrotate
+Requires=snap-nextcloud-33908.mount
+After=snap-nextcloud-33908.mount
+X-Snappy=yes
+
+[Timer]
+Unit=snap.nextcloud.logrotate.service
+OnCalendar=*-*-* 00:00
+
+[Install]
+WantedBy=timers.target

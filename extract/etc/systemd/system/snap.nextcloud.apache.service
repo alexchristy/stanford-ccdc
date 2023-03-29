@@ -1,0 +1,21 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application nextcloud.apache
+Requires=snap-nextcloud-33908.mount
+Wants=network.target
+After=snap-nextcloud-33908.mount network.target snapd.apparmor.service
+X-Snappy=yes
+
+[Service]
+EnvironmentFile=-/etc/environment
+ExecStart=/usr/bin/snap run nextcloud.apache
+SyslogIdentifier=nextcloud.apache
+Restart=always
+WorkingDirectory=/var/snap/nextcloud/33908
+ExecStop=/usr/bin/snap run --command=stop nextcloud.apache
+ExecReload=/usr/bin/snap run --command=reload nextcloud.apache
+TimeoutStopSec=30
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

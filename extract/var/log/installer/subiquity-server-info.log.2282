@@ -1,0 +1,112 @@
+2023-03-28 15:24:58,873 INFO subiquity:161 Starting Subiquity server revision 4380
+2023-03-28 15:24:58,873 INFO subiquity:162 Arguments passed: ['/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/cmd/server.py']
+2023-03-28 15:24:59,880 INFO aiohttp.access:233  [28/Mar/2023:15:24:59 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 419 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:26,753 INFO root:37 start: subiquity/apply_autoinstall_config: 
+2023-03-28 15:25:26,797 INFO root:37 finish: subiquity/apply_autoinstall_config: SUCCESS: 
+2023-03-28 15:25:26,798 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2023-03-28 15:25:26,849 INFO aiohttp.access:233  [28/Mar/2023:15:24:59 +0000] "GET /meta/status?cur=%22CLOUD_INIT_WAIT%22 HTTP/1.1" 200 411 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:26,851 INFO root:37 start: subiquity/Meta/client_variant_GET: 
+2023-03-28 15:25:26,851 INFO root:37 finish: subiquity/Meta/client_variant_GET: SUCCESS: 200 "server"
+2023-03-28 15:25:26,878 INFO aiohttp.access:233  [28/Mar/2023:15:25:26 +0000] "GET /meta/client_variant HTTP/1.1" 200 193 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:26,904 INFO root:37 start: subiquity/Meta/status_GET: 
+2023-03-28 15:25:26,909 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "WAITING", "confirming_tty": "", "error": null, "cloud_init_ok": tr...
+2023-03-28 15:25:26,933 INFO aiohttp.access:233  [28/Mar/2023:15:25:26 +0000] "GET /meta/status?cur=null HTTP/1.1" 200 411 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:26,934 INFO root:37 start: subiquity/Meta/client_variant_POST: 
+2023-03-28 15:25:27,016 INFO root:37 finish: subiquity/Meta/client_variant_POST: SUCCESS: 200 null
+2023-03-28 15:25:27,022 INFO aiohttp.access:233  [28/Mar/2023:15:25:26 +0000] "POST /meta/client_variant?variant=%22server%22 HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:27,022 INFO root:37 start: subiquity/Meta/status_GET: 
+2023-03-28 15:25:27,058 INFO aiohttp.access:233  [28/Mar/2023:15:25:27 +0000] "GET /locale HTTP/1.1" 200 194 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:27,814 INFO curtin:1329 Validating extracted storage config components
+2023-03-28 15:25:28,971 INFO aiohttp.access:233  [28/Mar/2023:15:25:28 +0000] "POST /locale HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:28,973 INFO aiohttp.access:233  [28/Mar/2023:15:25:28 +0000] "GET /refresh HTTP/1.1" 200 272 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:28,996 INFO aiohttp.access:233  [28/Mar/2023:15:25:28 +0000] "GET /keyboard HTTP/1.1" 200 41537 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:29,214 INFO aiohttp.access:233  [28/Mar/2023:15:25:29 +0000] "GET /keyboard/needs_toggle?layout_code=%22us%22&variant_code=%22%22 HTTP/1.1" 200 190 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:29,216 INFO aiohttp.access:233  [28/Mar/2023:15:25:29 +0000] "POST /keyboard HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:29,218 INFO aiohttp.access:233  [28/Mar/2023:15:25:29 +0000] "GET /source HTTP/1.1" 200 772 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:30,842 INFO aiohttp.access:233  [28/Mar/2023:15:25:30 +0000] "POST /source?source_id=%22ubuntu-server%22&search_drivers=false HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:30,844 INFO aiohttp.access:233  [28/Mar/2023:15:25:30 +0000] "GET /zdev HTTP/1.1" 200 180 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:30,846 INFO root:37 start: subiquity/Network/apply_config: silent=True
+2023-03-28 15:25:30,866 INFO aiohttp.access:233  [28/Mar/2023:15:25:30 +0000] "GET /network HTTP/1.1" 200 902 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:30,887 INFO aiohttp.access:233  [28/Mar/2023:15:25:30 +0000] "PUT /network/subscription?socket_path=%22/tmp/tmpmuwk3mah/socket%22 HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:33,892 INFO aiohttp.access:233  [28/Mar/2023:15:25:33 +0000] "POST /network HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:33,896 INFO aiohttp.access:233  [28/Mar/2023:15:25:33 +0000] "GET /proxy HTTP/1.1" 200 187 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:33,898 INFO aiohttp.access:233  [28/Mar/2023:15:25:33 +0000] "DELETE /network/subscription?socket_path=%22/tmp/tmpmuwk3mah/socket%22 HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:35,101 INFO aiohttp.access:233  [28/Mar/2023:15:25:35 +0000] "POST /proxy HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:35,112 INFO aiohttp.access:233  [28/Mar/2023:15:25:35 +0000] "GET /mirror HTTP/1.1" 200 220 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:35,755 INFO aiohttp.access:233  [28/Mar/2023:15:25:35 +0000] "POST /mirror HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:35,786 INFO aiohttp.access:233  [28/Mar/2023:15:25:35 +0000] "GET /refresh HTTP/1.1" 200 272 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:37,893 INFO aiohttp.access:233  [28/Mar/2023:15:25:37 +0000] "GET /storage/guided HTTP/1.1" 200 577 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:42,359 INFO root:37 finish: subiquity/Network/apply_config: SUCCESS: silent=True
+2023-03-28 15:25:42,861 INFO aiohttp.access:233  [28/Mar/2023:15:25:42 +0000] "POST /storage/guided HTTP/1.1" 200 6434 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:43,884 INFO aiohttp.access:233  [28/Mar/2023:15:25:43 +0000] "POST /storage HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:43,884 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "NEEDS_CONFIRMATION", "confirming_tty": "", "error": null, "cloud_i...
+2023-03-28 15:25:43,886 INFO aiohttp.access:233  [28/Mar/2023:15:25:27 +0000] "GET /meta/status?cur=%22WAITING%22 HTTP/1.1" 200 422 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:43,888 INFO aiohttp.access:233  [28/Mar/2023:15:25:43 +0000] "GET /identity HTTP/1.1" 200 183 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:43,888 INFO root:37 start: subiquity/Meta/status_GET: 
+2023-03-28 15:25:46,183 INFO root:37 start: subiquity/Meta/confirm_POST: 
+2023-03-28 15:25:46,183 INFO root:37 finish: subiquity/Meta/confirm_POST: SUCCESS: 200 null
+2023-03-28 15:25:46,183 INFO aiohttp.access:233  [28/Mar/2023:15:25:46 +0000] "POST /meta/confirm?tty=%22/dev/tty1%22 HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:46,184 INFO root:37 start: subiquity/Install/install/configure_apt: configuring apt
+2023-03-28 15:25:46,195 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "RUNNING", "confirming_tty": "/dev/tty1", "error": null, "cloud_ini...
+2023-03-28 15:25:46,198 INFO aiohttp.access:233  [28/Mar/2023:15:25:43 +0000] "GET /meta/status?cur=%22NEEDS_CONFIRMATION%22 HTTP/1.1" 200 420 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:46,206 INFO aiohttp.access:233  [28/Mar/2023:15:25:46 +0000] "GET /identity HTTP/1.1" 200 258 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:25:46,207 INFO root:37 start: subiquity/Meta/status_GET: 
+2023-03-28 15:25:49,409 INFO root:37 finish: subiquity/Install/install/configure_apt: SUCCESS: configuring apt
+2023-03-28 15:25:49,409 INFO root:37 start: subiquity/Install/install/curtin_install: installing system
+2023-03-28 15:25:59,846 ERROR subiquity.server.controllers.refresh:177 checking for snap update failed
+Traceback (most recent call last):
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/server/controllers/refresh.py", line 175, in check_for_update
+    result = await self.app.snapd.get('v2/find', select='refresh')
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquitycore/snapd.py", line 180, in get
+    response.raise_for_status()
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+unix://%2Frun%2Fsnapd.socket/v2/find?select=refresh
+2023-03-28 15:25:59,851 INFO aiohttp.access:233  [28/Mar/2023:15:25:35 +0000] "GET /refresh?wait=true HTTP/1.1" 200 272 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:00,606 WARNING subiquity.server.geoip:112 geoip lookup failed: ClientConnectorError(ConnectionKey(host='geoip.ubuntu.com', port=443, is_ssl=True, ssl=None, proxy=None, proxy_auth=None, proxy_headers_hash=None), gaierror(-3, 'Temporary failure in name resolution'))
+2023-03-28 15:26:05,377 INFO aiohttp.access:233  [28/Mar/2023:15:26:05 +0000] "GET /identity/validate_username?username=%22administrator%22 HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:20,522 INFO aiohttp.access:233  [28/Mar/2023:15:26:20 +0000] "POST /identity HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:20,525 INFO aiohttp.access:233  [28/Mar/2023:15:26:20 +0000] "GET /ubuntu_pro HTTP/1.1" 200 221 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:23,366 INFO aiohttp.access:233  [28/Mar/2023:15:26:23 +0000] "POST /ubuntu_pro HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:23,368 INFO aiohttp.access:233  [28/Mar/2023:15:26:23 +0000] "GET /ssh HTTP/1.1" 200 252 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:28,383 INFO aiohttp.access:233  [28/Mar/2023:15:26:28 +0000] "POST /ssh HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:28,385 INFO aiohttp.access:233  [28/Mar/2023:15:26:28 +0000] "GET /drivers HTTP/1.1" 200 264 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:28,386 INFO aiohttp.access:233  [28/Mar/2023:15:26:28 +0000] "GET /snaplist HTTP/1.1" 200 237 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:28,390 INFO aiohttp.access:233  [28/Mar/2023:15:26:28 +0000] "POST /snaplist HTTP/1.1" 200 189 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:26:32,836 ERROR root:37 finish: subiquity/SnapList/loader/list: FAIL: 
+2023-03-28 15:26:32,837 ERROR subiquity.server.controllers.snaplist:98 loading list of snaps failed
+Traceback (most recent call last):
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/server/controllers/snaplist.py", line 111, in _load_list
+    result = await self.snapd.get(
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquitycore/snapd.py", line 180, in get
+    response.raise_for_status()
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: http+unix://%2Frun%2Fsnapd.socket/v2/find?section=server
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/server/controllers/snaplist.py", line 96, in _start
+    await task
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquitycore/context.py", line 148, in decorated_async
+    return await meth(self, **kw)
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/server/controllers/snaplist.py", line 114, in _load_list
+    raise SnapListFetchError
+subiquity.server.controllers.snaplist.SnapListFetchError
+2023-03-28 15:26:32,850 ERROR subiquity.server.controllers.refresh:177 checking for snap update failed
+Traceback (most recent call last):
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquity/server/controllers/refresh.py", line 175, in check_for_update
+    result = await self.app.snapd.get('v2/find', select='refresh')
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/subiquitycore/snapd.py", line 180, in get
+    response.raise_for_status()
+  File "/snap/subiquity/4380/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+unix://%2Frun%2Fsnapd.socket/v2/find?select=refresh
+2023-03-28 15:34:52,684 INFO root:37 finish: subiquity/Install/install/curtin_install: SUCCESS: installing system
+2023-03-28 15:34:52,686 INFO root:37 start: subiquity/Install/install/postinstall: final system configuration
+2023-03-28 15:34:52,706 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "RUNNING", "confirming_tty": "/dev/tty1", "error": null, "cloud_ini...
+2023-03-28 15:34:52,715 INFO aiohttp.access:233  [28/Mar/2023:15:25:46 +0000] "GET /meta/status?cur=%22RUNNING%22 HTTP/1.1" 200 420 "-" "Python/3.8 aiohttp/3.6.2"
+2023-03-28 15:34:52,716 INFO root:37 start: subiquity/Meta/status_GET: 
+2023-03-28 15:34:58,066 INFO root:37 finish: subiquity/Install/install/postinstall: SUCCESS: final system configuration
+2023-03-28 15:34:58,068 INFO root:37 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "DONE", "confirming_tty": "/dev/tty1", "error": null, "cloud_init_o...

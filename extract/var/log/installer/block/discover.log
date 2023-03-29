@@ -1,0 +1,46 @@
+2023-03-28 15:24:58,908 curtin:87 Running command ['dpkg', '--print-architecture'] with allowed return codes [0] (capture=True)
+2023-03-28 15:24:59,868 curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2023-03-28 15:24:59,873 curtin.reporting.finish.subiquity/Meta/status_GET:45 finish: subiquity/Meta/status_GET: SUCCESS: 200 {"state": "CLOUD_INIT_WAIT", "confirming_tty": "", "error": null, "cloud_init...
+2023-03-28 15:24:59,907 curtin.reporting.start.subiquity/Meta/status_GET:45 start: subiquity/Meta/status_GET: 
+2023-03-28 15:25:26,935 curtin:87 Running command ['mount', '-o', 'loop,ro', '///cdrom/casper/ubuntu-server-minimal.squashfs', '/tmp/tmpp6fpxbj1/ubuntu-server-minimal.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:26,964 curtin:87 Running command ['mount', '-o', 'loop,ro', '///cdrom/casper/ubuntu-server-minimal.ubuntu-server.squashfs', '/tmp/tmpp6fpxbj1/ubuntu-server-minimal.ubuntu-server.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:26,987 curtin:87 Running command ['mount', '-o', 'lowerdir=/tmp/tmpp6fpxbj1/ubuntu-server-minimal.ubuntu-server.squashfs.dir:/tmp/tmpp6fpxbj1/ubuntu-server-minimal.squashfs.dir', '-t', 'overlay', 'overlay', '/tmp/tmpp6fpxbj1/root.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:27,733 probert.dasd:134 Probing DASD devies
+2023-03-28 15:25:27,734 probert.dasd:137 DASD devices only present on s390x, arch=x86_64
+2023-03-28 15:25:27,744 probert.multipath:48 Extracted multipath maps fields: ['ok']
+2023-03-28 15:25:27,745 probert.multipath:52 Failed to parse multipath maps entry: ok: __new__() missing 2 required positional arguments: 'sysfs' and 'paths'
+2023-03-28 15:25:27,754 probert.multipath:48 Extracted multipath paths fields: ['ok']
+2023-03-28 15:25:27,755 probert.multipath:52 Failed to parse multipath paths entry: ok: __new__() missing 7 required positional arguments: 'serial', 'multipath', 'host_wwnn', 'target_wwnn', 'host_wwpn', 'target_wwpn', and 'host_adapter'
+2023-03-28 15:25:27,790 curtin:1303 Extracting storage config from probe data
+2023-03-28 15:25:27,790 curtin:73 /dev/sda is multipath device member? False
+2023-03-28 15:25:27,790 curtin:86 /dev/sda is multipath device partition? False
+2023-03-28 15:25:27,790 curtin:61 /dev/sda is multipath device? False
+2023-03-28 15:25:27,791 curtin:86 /dev/sda is multipath device partition? False
+2023-03-28 15:25:27,791 curtin:61 /dev/sda is multipath device? False
+2023-03-28 15:25:27,813 curtin:73 /dev/sr0 is multipath device member? False
+2023-03-28 15:25:27,813 curtin:86 /dev/sr0 is multipath device partition? False
+2023-03-28 15:25:27,813 curtin:73 /dev/sr0 is multipath device member? False
+2023-03-28 15:25:27,814 curtin:1310 Sorting extracted configurations
+2023-03-28 15:25:27,814 curtin:1329 Validating extracted storage config components
+2023-03-28 15:25:27,835 curtin:1346 Extracted (unmerged) storage config:
+storage:
+-   id: disk-sda
+    path: /dev/sda
+    type: disk
+
+2023-03-28 15:25:27,835 curtin:1350 Generating storage config dependencies
+2023-03-28 15:25:27,835 curtin:1356 Merging storage config dependencies
+2023-03-28 15:25:27,836 curtin:1361 Merged storage config:
+storage:
+    config:
+    -   id: disk-sda
+        path: /dev/sda
+        type: disk
+    version: 2
+
+2023-03-28 15:25:30,757 curtin:87 Running command ['umount', '/tmp/tmpp6fpxbj1/root.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:30,771 curtin:87 Running command ['umount', '/tmp/tmpp6fpxbj1/ubuntu-server-minimal.ubuntu-server.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:30,785 curtin:87 Running command ['umount', '/tmp/tmpp6fpxbj1/ubuntu-server-minimal.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:30,799 curtin:87 Running command ['mount', '-o', 'loop,ro', '///cdrom/casper/ubuntu-server-minimal.squashfs', '/tmp/tmpkjkvpr6k/ubuntu-server-minimal.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:30,814 curtin:87 Running command ['mount', '-o', 'loop,ro', '///cdrom/casper/ubuntu-server-minimal.ubuntu-server.squashfs', '/tmp/tmpkjkvpr6k/ubuntu-server-minimal.ubuntu-server.squashfs.dir'] with allowed return codes [0] (capture=True)
+2023-03-28 15:25:30,829 curtin:87 Running command ['mount', '-o', 'lowerdir=/tmp/tmpkjkvpr6k/ubuntu-server-minimal.ubuntu-server.squashfs.dir:/tmp/tmpkjkvpr6k/ubuntu-server-minimal.squashfs.dir', '-t', 'overlay', 'overlay', '/tmp/tmpkjkvpr6k/root.dir'] with allowed return codes [0] (capture=True)

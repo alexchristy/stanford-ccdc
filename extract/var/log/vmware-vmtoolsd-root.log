@@ -1,0 +1,9 @@
+[2023-03-28T15:36:19.985Z] [ message] [vmtoolsd] [707] VMware Tools Version: 12.1.0.37487 (build-20219665)
+[2023-03-28T15:36:19.985Z] [ message] [vmtoolsd] [707] Guest OS details: architecture='X86' bitness='64' distroName='Ubuntu 22.04.2 LTS' distroVersion='22.04' familyName='Linux' kernelVersion='5.15.0-60-generic' prettyName='Ubuntu 22.04.2 LTS'
+[2023-03-28T15:36:19.985Z] [ message] [vmtoolsd] [707] Log caching is enabled with maxCacheEntries=4096.
+[2023-03-28T15:36:19.985Z] [ message] [vmtoolsd] [707] Core dump limit set to -1
+[2023-03-28T15:36:19.989Z] [ message] [vmtoolsd] [707] Cannot load message catalog for domain 'vmtoolsd', language 'C', catalog dir '/usr/share/open-vm-tools'.
+[2023-03-30T08:42:58.433Z] [ message] [vmtoolsd] [45059] VMware Tools Version: 12.1.0.37487 (build-20219665)
+[2023-03-30T08:42:58.439Z] [ message] [vmtoolsd] [45059] Guest OS details: architecture='X86' bitness='64' distroName='Ubuntu 22.04.2 LTS' distroVersion='22.04' familyName='Linux' kernelVersion='5.15.0-60-generic' prettyName='Ubuntu 22.04.2 LTS'
+[2023-03-30T08:42:58.433Z] [ message] [vmtoolsd] [45059] Log caching is enabled with maxCacheEntries=4096.
+[2023-03-30T08:42:58.439Z] [ message] [vmtoolsd] [45059] Core dump limit set to -1

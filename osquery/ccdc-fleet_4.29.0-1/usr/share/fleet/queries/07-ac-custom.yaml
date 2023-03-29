@@ -1,0 +1,36 @@
+---
+apiVersion: v1
+kind: pack
+spec:
+  name: LinuxPack
+  queries:
+  - description: CUSTOM Returns a list of all processes listening on ports exposed beyond localhost. 
+    interval: 10
+    name: custom_non_localhost_ports
+    platform: linux
+    query: custom_non_localhost_ports
+    snapshot: true
+  - description: CUSTOM Reverse shell monitoring.
+    interval: 10
+    name: custom_rev_shell
+    platform: linux
+    query: custom_rev_shell
+    snapshot: true
+  targets:
+    labels: 
+    - Ubuntu Linux
+    - CentOS Linux
+---
+apiVersion: v1
+kind: query
+spec:
+  description: Returns a list of all processes listening on ports exposed beyond localhost.
+  name: custom_non_localhost_ports 
+  query: SELECT CASE WHEN l.address = "::" THEN "0.0.0.0" ELSE l.address END AS address, l.port, l.pid, p.name, p.path FROM listening_ports l JOIN processes p USING (pid) WHERE l.port != 0 AND (l.address NOT LIKE "127.%") AND (l.address != "::1") GROUP BY l.pid, l.port; 
+---
+apiVersion: v1
+kind: query
+spec:
+  description: CUSTOM Reverse shell monitoring. 
+  name: custom_rev_shell
+  query: SELECT DISTINCT(processes.pid), processes.parent, processes.name, processes.path, processes.cmdline, processes.cwd, processes.root, processes.uid, processes.gid, processes.start_time, process_open_sockets.remote_address, process_open_sockets.remote_port, (SELECT cmdline FROM processes AS parent_cmdline WHERE pid=processes.parent) AS parent_cmdline FROM processes JOIN process_open_sockets USING (pid) WHERE (name='sh' OR name='bash' OR name='powershell.exe' OR name='cmd.exe' OR processes.path LIKE '/tmp/%');

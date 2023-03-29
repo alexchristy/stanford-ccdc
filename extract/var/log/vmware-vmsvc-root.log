@@ -1,0 +1,18 @@
+[2023-03-30T08:42:58.444Z] [ message] [vmsvc] [45059] VMware Tools Version: 12.1.0.37487 (build-20219665)
+[2023-03-30T08:42:58.447Z] [ message] [vmsvc] [45059] Guest OS details: architecture='X86' bitness='64' distroName='Ubuntu 22.04.2 LTS' distroVersion='22.04' familyName='Linux' kernelVersion='5.15.0-60-generic' prettyName='Ubuntu 22.04.2 LTS'
+[2023-03-30T08:42:58.444Z] [ message] [vmsvc] [45059] Log caching is enabled with maxCacheEntries=4096.
+[2023-03-30T08:42:58.447Z] [ message] [vmsvc] [45059] Core dump limit set to -1
+[2023-03-30T08:42:58.489Z] [ message] [vmtoolsd] [45059] Plugin 'hgfsServer' initialized.
+[2023-03-30T08:42:58.489Z] [ message] [vix] [45059] QueryVGAuthConfig: vgauth usage is: 1
+[2023-03-30T08:42:58.489Z] [ message] [vmtoolsd] [45059] Plugin 'vix' initialized.
+[2023-03-30T08:42:58.489Z] [ message] [vmtoolsd] [45059] Plugin 'appInfo' initialized.
+[2023-03-30T08:42:58.489Z] [ message] [vmtoolsd] [45059] Plugin 'componentMgr' initialized.
+[2023-03-30T08:42:58.490Z] [ message] [vmtoolsd] [45059] Plugin 'deployPkg' initialized.
+[2023-03-30T08:42:58.490Z] [ message] [vmtoolsd] [45059] Plugin 'guestInfo' initialized.
+[2023-03-30T08:42:58.490Z] [ message] [vmtoolsd] [45059] Plugin 'powerops' initialized.
+[2023-03-30T08:42:58.490Z] [ message] [resolutionCommon] [45059] resolutionCheckForKMS: dlopen succeeded.
+[2023-03-30T08:42:58.505Z] [ message] [resolutionCommon] [45059] resolutionCheckForKMS: System support available for resolutionKMS.
+[2023-03-30T08:42:58.505Z] [ message] [vmtoolsd] [45059] Plugin 'resolutionKMS' initialized.
+[2023-03-30T08:42:58.505Z] [ message] [vmtoolsd] [45059] Plugin 'timeSync' initialized.
+[2023-03-30T08:42:58.505Z] [ message] [vmtoolsd] [45059] Plugin 'vmbackup' initialized.
+[2023-03-30T08:42:58.537Z] [ message] [vix] [45059] VixTools_ProcessVixCommand: command 62

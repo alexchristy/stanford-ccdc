@@ -1,0 +1,22 @@
+[Unit]
+Description=Fleet
+After=network.target
+
+[Service]
+User=fleet
+Group=fleet
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+LimitNOFILE=8192
+ExecStart=/opt/fleet/fleet serve \
+  --mysql_address=127.0.0.1:3306 \
+  --mysql_database=fleet \
+  --mysql_username=fleet \
+  --mysql_password=REPLACEME \
+  --redis_address=127.0.0.1:6379 \
+  --server_address=0.0.0.0:443 \
+  --server_cert=/opt/fleet/server.cert \
+  --server_key=/opt/fleet/server.key \
+  --logging_json
+
+[Install]
+WantedBy=multi-user.target

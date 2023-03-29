@@ -1,0 +1,20 @@
+2023-03-29 06:21:03,910 INFO Starting unattended upgrades script
+2023-03-29 06:21:03,911 INFO Allowed origins are: o=Ubuntu,a=jammy, o=Ubuntu,a=jammy-security, o=UbuntuESMApps,a=jammy-apps-security, o=UbuntuESM,a=jammy-infra-security
+2023-03-29 06:21:03,912 INFO Initial blacklist: 
+2023-03-29 06:21:03,912 INFO Initial whitelist (not strict): 
+2023-03-29 06:21:32,500 INFO Packages that will be upgraded: curl intel-microcode libcurl3-gnutls libcurl4 libgnutls30 libnss-systemd libnss3 libpam-systemd libpython3.10 libpython3.10-minimal libpython3.10-stdlib libsystemd0 libudev1 linux-generic linux-headers-generic linux-image-generic python3.10 python3.10-minimal rsync sudo systemd systemd-sysv systemd-timesyncd tar udev vim vim-common vim-runtime vim-tiny xxd
+2023-03-29 06:21:32,501 INFO Writing dpkg log to /var/log/unattended-upgrades/unattended-upgrades-dpkg.log
+2023-03-29 06:26:13,047 INFO All upgrades installed
+2023-03-29 23:19:17,264 INFO Starting unattended upgrades script
+2023-03-29 23:19:17,265 INFO Allowed origins are: o=Ubuntu,a=jammy, o=Ubuntu,a=jammy-security, o=UbuntuESMApps,a=jammy-apps-security, o=UbuntuESM,a=jammy-infra-security
+2023-03-29 23:19:17,265 INFO Initial blacklist: 
+2023-03-29 23:19:17,266 INFO Initial whitelist (not strict): 
+2023-03-30 06:15:22,076 INFO Starting unattended upgrades script
+2023-03-30 06:15:22,077 INFO Allowed origins are: o=Ubuntu,a=jammy, o=Ubuntu,a=jammy-security, o=UbuntuESMApps,a=jammy-apps-security, o=UbuntuESM,a=jammy-infra-security
+2023-03-30 06:15:22,077 INFO Initial blacklist: 
+2023-03-30 06:15:22,078 INFO Initial whitelist (not strict): 
+2023-03-30 06:15:23,871 INFO No packages found that can be upgraded unattended and no pending auto-removals
+2023-03-30 09:16:36,501 INFO Starting unattended upgrades script
+2023-03-30 09:16:36,510 INFO Allowed origins are: o=Ubuntu,a=jammy, o=Ubuntu,a=jammy-security, o=UbuntuESMApps,a=jammy-apps-security, o=UbuntuESM,a=jammy-infra-security
+2023-03-30 09:16:36,511 INFO Initial blacklist: 
+2023-03-30 09:16:36,511 INFO Initial whitelist (not strict): 

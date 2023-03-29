@@ -1,0 +1,16 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application nextcloud.logrotate
+Requires=snap-nextcloud-33908.mount
+Wants=network.target
+After=snap-nextcloud-33908.mount network.target snapd.apparmor.service
+X-Snappy=yes
+
+[Service]
+EnvironmentFile=-/etc/environment
+ExecStart=/usr/bin/snap run --timer="00:00" nextcloud.logrotate
+SyslogIdentifier=nextcloud.logrotate
+Restart=on-failure
+WorkingDirectory=/var/snap/nextcloud/33908
+TimeoutStopSec=30
+Type=simple

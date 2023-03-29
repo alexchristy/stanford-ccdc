@@ -29,10 +29,8 @@ def map_network(subnet):
     nmap = subprocess.run(
         args=[
             "nmap",
-            "-sS",
             "-p",
             "22,135,445,3389,5985,5986",
-            "-Pn",
             "-O",
             "-sV",
             "-T4",
@@ -57,73 +55,76 @@ def parse_xml(xml_file):
     tree = ET.parse(xml_file)
     root = tree.getroot()
     for host in root.iter("host"):
-        os_type = "unknown" # {windows|linux|unknown}
-        open_ports = []
+        try:
+            os_type = "unknown" # {windows|linux|unknown}
+            open_ports = []
 
-        # retrieve IP, why is this so complicated
-        for address in host.iter("address"):
-            if address.attrib["addrtype"] == "ipv4":
-                ip = address.attrib["addr"]
-                break
+            # retrieve IP, why is this so complicated
+            for address in host.iter("address"):
+                if address.attrib["addrtype"] == "ipv4":
+                    ip = address.attrib["addr"]
+                    break
 
-        # retrieve hostname
-        if hostnames := host.find("hostnames"):
-            hostname = hostnames.find("hostname").attrib["name"]
-        else:
-            hostname = "unknown_hostname"
-
-        # retrieve open ports, ignore closed and filtered ports
-        for port_node in host.find("ports"):
-            state = port_node.find("state").attrib["state"]
-            if state == "open":
-                port_num = port_node.attrib["portid"]
-                open_ports.append(port_num)
-                if port_num == "22":
-                    ssh_version = port_node.find("service").attrib["version"].lower()
-
-        # if every port is closed just assume the host is down
-        if not len(open_ports):
-            continue
-
-        # first, we use our heuristics to guess the os type based off open ports
-        if "3389" in open_ports or "5985" in open_ports or ("135" in open_ports and "445" in open_ports):
-            os_type = "windows"
-        elif "22" in open_ports:
-            if "bsd" in ssh_version:
-                os_type = "unknown"
+            # retrieve hostname
+            if hostnames := host.find("hostnames"):
+                hostname = hostnames.find("hostname").attrib["name"]
             else:
-                os_type = "linux"
+                hostname = "unknown_hostname"
 
-        # if there were no matches, trust the heuristic (this usually isn't an
-        # issue since it's usually windows that causes issues, and the heuristic
-        # is pretty good at detecting windows
-        os_node = host.find("os").find("osmatch")
-        if not os_node:
-            host_map[os_type].append((ip, hostname, "None", "0", []))
-            continue
+            # retrieve open ports, ignore closed and filtered ports
+            for port_node in host.find("ports"):
+                state = port_node.find("state").attrib["state"]
+                if state == "open":
+                    port_num = port_node.attrib["portid"]
+                    open_ports.append(port_num)
+                    if port_num == "22":
+                        ssh_version = port_node.find("service").attrib["version"].lower()
 
-        nmap_confidence = os_node.attrib["accuracy"]
-        guess = os_node.find("osclass").attrib["osfamily"]
+            # if every port is closed just assume the host is down
+            if not len(open_ports):
+                continue
 
-        # second, if nmap is over 90% confident in its first guess, and it's not
-        # obviously wrong, just go with that
-        print(f"Guess for {ip} is {guess}")
-        if int(nmap_confidence) >= 90:
-            if guess == "Linux" and "22" in open_ports:
-                os_type = "linux"
-            elif guess == "Windows" and ("3389" in open_ports or "445" in open_ports):
+            # first, we use our heuristics to guess the os type based off open ports
+            if "3389" in open_ports or "5985" in open_ports or ("135" in open_ports and "445" in open_ports):
                 os_type = "windows"
-            # sometimes windows is detected as an old freebsd version since
-            # Microsoft stole FreeBSD's network stack
-            elif guess == "FreeBSD" and os_node.find("osclass").attrib["osgen"][0] == "6":
-                os_type = "windows"
-            # if nmap is over 90% confident our heuristic is incorrect, that's bad
+            elif "22" in open_ports:
+                if "bsd" in ssh_version:
+                    os_type = "unknown"
+                else:
+                    os_type = "linux"
+
+            # if there were no matches, trust the heuristic (this usually isn't an
+            # issue since it's usually windows that causes issues, and the heuristic
+            # is pretty good at detecting windows
+            os_node = host.find("os").find("osmatch")
+            if not os_node:
+                host_map[os_type].append((ip, hostname, "None", "0", []))
+                continue
+
+            nmap_confidence = os_node.attrib["accuracy"]
+            guess = os_node.find("osclass").attrib["osfamily"]
+
+            # second, if nmap is over 90% confident in its first guess, and it's not
+            # obviously wrong, just go with that
+            print(f"Guess for {ip} is {guess}")
+            if int(nmap_confidence) >= 90:
+                if guess == "Linux" and "22" in open_ports:
+                    os_type = "linux"
+                elif guess == "Windows" and ("3389" in open_ports or "445" in open_ports):
+                    os_type = "windows"
+                # sometimes windows is detected as an old freebsd version since
+                # Microsoft stole FreeBSD's network stack
+                elif guess == "FreeBSD" and os_node.find("osclass").attrib["osgen"][0] == "6":
+                    os_type = "windows"
+                # if nmap is over 90% confident our heuristic is incorrect, that's bad
+                else:
+                    os_type = "unknown"
             else:
-                os_type = "unknown"
-        else:
-            print("Rejecting guess: not confident enough")
+                print("Rejecting guess: not confident enough")
 
-        host_map[os_type].append((ip, hostname, guess, nmap_confidence, ','.join(open_ports)))
+            host_map[os_type].append((ip, hostname, guess, nmap_confidence, ','.join(open_ports)))
+        except Exception as e:
+            print(f"FAILED TO PARSE HOST {host}")
     return host_map
 
 # Params: the map generated by parse_xml() and an output file name

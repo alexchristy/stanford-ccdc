@@ -1,0 +1,475 @@
+Log started: 2023-03-29  06:21:32
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 91413 files and directories currently installed.)
+Preparing to unpack .../tar_1.34+dfsg-1ubuntu0.1.22.04.1_amd64.deb ...
+Unpacking tar (1.34+dfsg-1ubuntu0.1.22.04.1) over (1.34+dfsg-1build3) ...
+Setting up tar (1.34+dfsg-1ubuntu0.1.22.04.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-60-generic
+NEEDRESTART-KSTA: 1
+Log ended: 2023-03-29  06:21:39
+
+Log started: 2023-03-29  06:21:39
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 91413 files and directories currently installed.)
+Preparing to unpack .../0-systemd-timesyncd_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking systemd-timesyncd (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../1-systemd-sysv_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking systemd-sysv (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../2-libnss-systemd_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking libnss-systemd:amd64 (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../3-libpam-systemd_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking libpam-systemd:amd64 (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../4-systemd_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking systemd (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../5-libsystemd0_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking libsystemd0:amd64 (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Setting up libsystemd0:amd64 (249.11-0ubuntu3.7) ...
+Setting up systemd (249.11-0ubuntu3.7) ...
+Setting up systemd-timesyncd (249.11-0ubuntu3.7) ...
+Setting up systemd-sysv (249.11-0ubuntu3.7) ...
+Setting up libnss-systemd:amd64 (249.11-0ubuntu3.7) ...
+Setting up libpam-systemd:amd64 (249.11-0ubuntu3.7) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-60-generic
+NEEDRESTART-KSTA: 1
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:21:51
+
+Log started: 2023-03-29  06:21:52
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 91413 files and directories currently installed.)
+Preparing to unpack .../rsync_3.2.7-0ubuntu0.22.04.2_amd64.deb ...
+Unpacking rsync (3.2.7-0ubuntu0.22.04.2) over (3.2.3-8ubuntu3.1) ...
+Setting up rsync (3.2.7-0ubuntu0.22.04.2) ...
+rsync.service is a disabled or a static unit not running, not starting it.
+Processing triggers for man-db (2.10.2-1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-60-generic
+NEEDRESTART-KSTA: 1
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:21:58
+
+Log started: 2023-03-29  06:21:59
+Selecting previously unselected package linux-modules-5.15.0-69-generic.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 91413 files and directories currently installed.)
+Preparing to unpack .../0-linux-modules-5.15.0-69-generic_5.15.0-69.76_amd64.deb ...
+Unpacking linux-modules-5.15.0-69-generic (5.15.0-69.76) ...
+Selecting previously unselected package linux-image-5.15.0-69-generic.
+Preparing to unpack .../1-linux-image-5.15.0-69-generic_5.15.0-69.76_amd64.deb ...
+Unpacking linux-image-5.15.0-69-generic (5.15.0-69.76) ...
+Selecting previously unselected package linux-modules-extra-5.15.0-69-generic.
+Preparing to unpack .../2-linux-modules-extra-5.15.0-69-generic_5.15.0-69.76_amd64.deb ...
+Unpacking linux-modules-extra-5.15.0-69-generic (5.15.0-69.76) ...
+Preparing to unpack .../3-linux-generic_5.15.0.69.67_amd64.deb ...
+Unpacking linux-generic (5.15.0.69.67) over (5.15.0.60.58) ...
+Preparing to unpack .../4-linux-image-generic_5.15.0.69.67_amd64.deb ...
+Unpacking linux-image-generic (5.15.0.69.67) over (5.15.0.60.58) ...
+Selecting previously unselected package linux-headers-5.15.0-69.
+Preparing to unpack .../5-linux-headers-5.15.0-69_5.15.0-69.76_all.deb ...
+Unpacking linux-headers-5.15.0-69 (5.15.0-69.76) ...
+Selecting previously unselected package linux-headers-5.15.0-69-generic.
+Preparing to unpack .../6-linux-headers-5.15.0-69-generic_5.15.0-69.76_amd64.deb ...
+Unpacking linux-headers-5.15.0-69-generic (5.15.0-69.76) ...
+Preparing to unpack .../7-linux-headers-generic_5.15.0.69.67_amd64.deb ...
+Unpacking linux-headers-generic (5.15.0.69.67) over (5.15.0.60.58) ...
+Setting up linux-headers-5.15.0-69 (5.15.0-69.76) ...
+Setting up linux-headers-5.15.0-69-generic (5.15.0-69.76) ...
+Setting up linux-headers-generic (5.15.0.69.67) ...
+Setting up linux-image-5.15.0-69-generic (5.15.0-69.76) ...
+I: /boot/vmlinuz is now a symlink to vmlinuz-5.15.0-69-generic
+I: /boot/initrd.img is now a symlink to initrd.img-5.15.0-69-generic
+Setting up linux-modules-extra-5.15.0-69-generic (5.15.0-69.76) ...
+Setting up linux-modules-5.15.0-69-generic (5.15.0-69.76) ...
+Setting up linux-image-generic (5.15.0.69.67) ...
+Setting up linux-generic (5.15.0.69.67) ...
+Processing triggers for linux-image-5.15.0-69-generic (5.15.0-69.76) ...
+/etc/kernel/postinst.d/initramfs-tools:
+update-initramfs: Generating /boot/initrd.img-5.15.0-69-generic
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/init-select.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-5.15.0-69-generic
+Found initrd image: /boot/initrd.img-5.15.0-69-generic
+Found linux image: /boot/vmlinuz-5.15.0-60-generic
+Found initrd image: /boot/initrd.img-5.15.0-60-generic
+Warning: os-prober will not be executed to detect other bootable partitions.
+Systems on them will not be added to the GRUB boot configuration.
+Check GRUB_DISABLE_OS_PROBER documentation entry.
+done
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:23:46
+
+Log started: 2023-03-29  06:23:47
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../vim_2%3a8.2.3995-1ubuntu2.4_amd64.deb ...
+Unpacking vim (2:8.2.3995-1ubuntu2.4) over (2:8.2.3995-1ubuntu2.3) ...
+Preparing to unpack .../vim-tiny_2%3a8.2.3995-1ubuntu2.4_amd64.deb ...
+Unpacking vim-tiny (2:8.2.3995-1ubuntu2.4) over (2:8.2.3995-1ubuntu2.3) ...
+Preparing to unpack .../vim-runtime_2%3a8.2.3995-1ubuntu2.4_all.deb ...
+Unpacking vim-runtime (2:8.2.3995-1ubuntu2.4) over (2:8.2.3995-1ubuntu2.3) ...
+Preparing to unpack .../vim-common_2%3a8.2.3995-1ubuntu2.4_all.deb ...
+Unpacking vim-common (2:8.2.3995-1ubuntu2.4) over (2:8.2.3995-1ubuntu2.3) ...
+Setting up vim-common (2:8.2.3995-1ubuntu2.4) ...
+Setting up vim-runtime (2:8.2.3995-1ubuntu2.4) ...
+Setting up vim (2:8.2.3995-1ubuntu2.4) ...
+Setting up vim-tiny (2:8.2.3995-1ubuntu2.4) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for man-db (2.10.2-1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:23:54
+
+Log started: 2023-03-29  06:23:55
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../curl_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.10) over (7.81.0-1ubuntu1.7) ...
+Preparing to unpack .../libcurl4_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.10) over (7.81.0-1ubuntu1.7) ...
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.10) ...
+Setting up curl (7.81.0-1ubuntu1.10) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:23:59
+
+Log started: 2023-03-29  06:24:00
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../libpython3.10_3.10.6-1~22.04.2ubuntu1_amd64.deb ...
+Unpacking libpython3.10:amd64 (3.10.6-1~22.04.2ubuntu1) over (3.10.6-1~22.04.2) ...
+Preparing to unpack .../python3.10_3.10.6-1~22.04.2ubuntu1_amd64.deb ...
+Unpacking python3.10 (3.10.6-1~22.04.2ubuntu1) over (3.10.6-1~22.04.2) ...
+Preparing to unpack .../libpython3.10-stdlib_3.10.6-1~22.04.2ubuntu1_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.6-1~22.04.2ubuntu1) over (3.10.6-1~22.04.2) ...
+Preparing to unpack .../python3.10-minimal_3.10.6-1~22.04.2ubuntu1_amd64.deb ...
+Unpacking python3.10-minimal (3.10.6-1~22.04.2ubuntu1) over (3.10.6-1~22.04.2) ...
+Preparing to unpack .../libpython3.10-minimal_3.10.6-1~22.04.2ubuntu1_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.6-1~22.04.2ubuntu1) over (3.10.6-1~22.04.2) ...
+Setting up libpython3.10-minimal:amd64 (3.10.6-1~22.04.2ubuntu1) ...
+Setting up python3.10-minimal (3.10.6-1~22.04.2ubuntu1) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.6-1~22.04.2ubuntu1) ...
+Setting up libpython3.10:amd64 (3.10.6-1~22.04.2ubuntu1) ...
+Setting up python3.10 (3.10.6-1~22.04.2ubuntu1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:24:08
+
+Log started: 2023-03-29  06:24:09
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../libgnutls30_3.7.3-4ubuntu1.2_amd64.deb ...
+Unpacking libgnutls30:amd64 (3.7.3-4ubuntu1.2) over (3.7.3-4ubuntu1.1) ...
+Setting up libgnutls30:amd64 (3.7.3-4ubuntu1.2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:24:13
+
+Log started: 2023-03-29  06:24:14
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../udev_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking udev (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Preparing to unpack .../libudev1_249.11-0ubuntu3.7_amd64.deb ...
+Unpacking libudev1:amd64 (249.11-0ubuntu3.7) over (249.11-0ubuntu3.6) ...
+Setting up libudev1:amd64 (249.11-0ubuntu3.7) ...
+Setting up udev (249.11-0ubuntu3.7) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for initramfs-tools (0.140ubuntu13.1) ...
+update-initramfs: Generating /boot/initrd.img-5.15.0-69-generic
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:25:05
+
+Log started: 2023-03-29  06:25:07
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../libnss3_2%3a3.68.2-0ubuntu1.2_amd64.deb ...
+Unpacking libnss3:amd64 (2:3.68.2-0ubuntu1.2) over (2:3.68.2-0ubuntu1.1) ...
+Setting up libnss3:amd64 (2:3.68.2-0ubuntu1.2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:25:12
+
+Log started: 2023-03-29  06:25:12
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../xxd_2%3a8.2.3995-1ubuntu2.4_amd64.deb ...
+Unpacking xxd (2:8.2.3995-1ubuntu2.4) over (2:8.2.3995-1ubuntu2.3) ...
+Setting up xxd (2:8.2.3995-1ubuntu2.4) ...
+Processing triggers for man-db (2.10.2-1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:25:17
+
+Log started: 2023-03-29  06:25:17
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../sudo_1.9.9-1ubuntu2.3_amd64.deb ...
+Unpacking sudo (1.9.9-1ubuntu2.3) over (1.9.9-1ubuntu2.2) ...
+Setting up sudo (1.9.9-1ubuntu2.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:25:22
+
+Log started: 2023-03-29  06:25:23
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126907 files and directories currently installed.)
+Preparing to unpack .../intel-microcode_3.20230214.0ubuntu0.22.04.1_amd64.deb ...
+Unpacking intel-microcode (3.20230214.0ubuntu0.22.04.1) over (3.20220809.0ubuntu0.22.04.1) ...
+Setting up intel-microcode (3.20230214.0ubuntu0.22.04.1) ...
+update-initramfs: deferring update (trigger activated)
+intel-microcode: microcode will be updated at next boot
+Processing triggers for initramfs-tools (0.140ubuntu13.1) ...
+update-initramfs: Generating /boot/initrd.img-5.15.0-69-generic
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:26:07
+
+Log started: 2023-03-29  06:26:08
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 126916 files and directories currently installed.)
+Preparing to unpack .../libcurl3-gnutls_7.81.0-1ubuntu1.10_amd64.deb ...
+Unpacking libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.10) over (7.81.0-1ubuntu1.7) ...
+Setting up libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+NEEDRESTART-VER: 3.5
+NEEDRESTART-KCUR: 5.15.0-60-generic
+NEEDRESTART-KEXP: 5.15.0-69-generic
+NEEDRESTART-KSTA: 3
+NEEDRESTART-SVC: apt-daily-upgrade.service
+NEEDRESTART-SVC: dbus.service
+NEEDRESTART-SVC: elasticsearch.service
+NEEDRESTART-SVC: graylog-server.service
+NEEDRESTART-SVC: ModemManager.service
+NEEDRESTART-SVC: mongod.service
+NEEDRESTART-SVC: multipathd.service
+NEEDRESTART-SVC: networkd-dispatcher.service
+NEEDRESTART-SVC: open-vm-tools.service
+NEEDRESTART-SVC: packagekit.service
+NEEDRESTART-SVC: polkit.service
+NEEDRESTART-SVC: rsyslog.service
+NEEDRESTART-SVC: ssh.service
+NEEDRESTART-SVC: systemd-logind.service
+NEEDRESTART-SVC: systemd-resolved.service
+NEEDRESTART-SVC: udisks2.service
+NEEDRESTART-SVC: unattended-upgrades.service
+NEEDRESTART-SVC: user@1000.service
+Log ended: 2023-03-29  06:26:12
+
