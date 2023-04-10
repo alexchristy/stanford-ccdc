@@ -1,4 +1,16 @@
-# This script enables auditing for various event categories on a Windows system
+# Check if .NET Framework 4.7 or later is installed
+if ((Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -ErrorAction SilentlyContinue).Release -ge 461808) {
+    Write-Output ".NET Framework 4.7 or later is already installed."
+}
+else {
+    # .NET Framework 4.7 or later is not installed; install it
+    Write-Output "Installing .NET Framework 4.7 or later..."
+    Install-WindowsFeature -Name "NET-Framework-45-Features" -IncludeAllSubFeature -Source "C:\sources\sxs"
+    Write-Output ".NET Framework 4.7 or later has been installed."
+}
+
+
+This script enables auditing for various event categories on a Windows system
 
 # Enable auditing of successful and failed logon events
 Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Lsa' -Name "AuditLogonEvents" -Value 3

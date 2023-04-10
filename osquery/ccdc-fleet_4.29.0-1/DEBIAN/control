@@ -1,8 +1,0 @@
-Package: ccdc-fleet
-Version: 4.29.0-1
-Section: base
-Priority: optional
-Architecture: amd64
-Depends: mysql-server, redis 
-Maintainer: CCDC Team <ccdcteam@example.com>
-Description: Customized installation of Fleet for CCDC competition.

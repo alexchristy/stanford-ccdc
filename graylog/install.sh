@@ -13,10 +13,10 @@ else
 	TIMEZONE="PST8PDT"
 fi
 
-print_step "Step 0: Concatenating debs"
+print_step "Step 0: Retrieving elasticsearch and graylog"
 
-cat elasticsearch_a elasticsearch_b elasticsearch_c elasticsearch_d > elasticsearch.deb
-cat graylog_a graylog_b graylog_c > graylog.deb
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.1-amd64.deb
+wget https://packages.graylog2.org/repo/debian/pool/stable/4.3/g/graylog-server/graylog-server_4.3.9-1_all.deb
 
 print_step "Step 1 Installing debs"
 
@@ -42,7 +42,7 @@ sed -i "s/password_secret =/password_secret = $PASSWORD_SECRET/" /etc/graylog/se
 echo "Installing password: $GRAYLOG_PASSWORD"
 sed -i "s/root_password_sha2 =/root_password_sha2 = $HASH/" /etc/graylog/server/server.conf
 echo "Changing the listerning port to 9000"
-sed -i "s/#http_bind_address = 127.0.0.1:9000/http_bind_address = 127.0.0.1:9000/" /etc/graylog/server/server.conf
+sed -i "s/#http_bind_address = 127.0.0.1:9000/http_bind_address = 0.0.0.0:9000/" /etc/graylog/server/server.conf
 echo "Setting the timezone to $TIMEZONE"
 sed -i "s/#root_timezone = UTC/root_timezone = $TIMEZONE/" /etc/graylog/server/server.conf
 
