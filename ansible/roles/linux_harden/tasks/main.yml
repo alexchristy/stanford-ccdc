@@ -1,0 +1,122 @@
+- name: Hide binaries in /usr/bin
+  command: "mv /usr/bin/{{ item }} {{ linux_root_bin }}"
+  with_items:
+    - sudo
+    - sudoedit
+    - su
+    - dd
+    - gcc
+    - ld
+    - nc
+    - netcat
+    - lsattr
+    - chattr
+    - mkfifo
+  ignore_errors: true
+
+- name: Hide binaries in /usr/sbin
+  command: "mv /usr/sbin/{{ item }} {{ linux_root_bin }}"
+  with_items:
+    - visudo
+    - cron
+    - cupsd
+  ignore_errors: true
+
+- name: Disable bpf for unprivileged users
+  ansible.posix.sysctl:
+    name: kernel.unprivileged_bpf_disabled
+    value: '1'
+
+- name: Replace many binaries with mimic
+  copy:
+    src: mimic
+    dest: "/usr/bin/{{ item }}"
+    mode: 0755
+  with_items:
+    - sudo
+    - sudoedit
+    - su
+    - dd
+    - gcc
+    - ld
+    - nc
+    - netcat
+    - lsattr
+    - chattr
+    - mkfifo
+    - visudo
+    - cron
+
+- name: Disable authorized keys
+  blockinfile:
+    dest: /etc/ssh/sshd_config
+    block: |
+      PubkeyAuthentication no
+      Match Address {{ management_server }}
+          PubkeyAuthentication yes
+  notify: Restart sshd
+
+- name: Only allow root to ssh in
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "^AllowUsers"
+    line: "AllowUsers root emergencyosogof newccdcadmin"
+    state: present
+  when: '"22" not in hostvars[inventory_hostname].userfacing'
+  notify: Restart sshd
+
+- name: Toss cups service
+  service:
+    name: cups
+    enabled: false
+    state: stopped
+
+- name: Toss ld.so.preload
+  file:
+    path: /etc/ld.so.preload
+    state: absent
+
+- name: Find all php.ini files
+  shell: "find /etc -type f | grep php.ini"
+  register: phps
+
+- name: Patch php.inis
+  blockinfile:
+    path: "{{ item }}"
+    append_newline: true
+    prepend_newline: true
+    marker: "; {mark} ANSIBLE MANAGED BLOCK"
+    block: |
+      expose_php = Off
+      track_errors = Off
+      html_errors = Off
+      file_uploads = Off
+      session.cookie_httponly = 1
+      disable_functions = exec, system, shell_exec, passthru, popen, curl_exec, curl_multi_exec, parse_ini_file, show_source, proc_open, pcntl_exec
+      max_execution_time = 3
+      register_globals = off
+      allow_url_fopen = off
+      allow_url_include = off
+      display_errors = off
+      short_open_tag = off
+      session.cookie_httponly = 1
+      session.use_only_cookies = 1
+      session.cookie_secure = 1
+  with_items: "{{ phps.stdout_lines }}"
+
+- name: Check which HTTP server is installed
+  command: "{{ item }}"
+  ignore_errors: true
+  with_items:
+    - "which httpd"
+    - "which apache2"
+    - "which apache"
+  register: httpd_binary
+
+- name: Restart HTTP server based on the detected binary
+  service:
+    name: "{{ item.stdout.split('/')[-1] }}"
+    state: restarted
+  with_items: "{{ httpd_binary.results }}"
+  when: item.rc == 0
+# TODO, TOSS EVERY SUID BINARY

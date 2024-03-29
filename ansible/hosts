@@ -1,0 +1,14 @@
+# ungrouped hosts here
+
+[linux] # insert linux hosts below
+
+[linux:vars]
+ansible_user=root
+ansible_connection=ssh
+
+[windows] # insert windows hosts below
+
+[windows:vars]
+ansible_user=Administrator
+ansible_connection=ssh
+ansible_shell_type=cmd

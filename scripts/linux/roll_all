@@ -1,0 +1,7 @@
+#!/bin/sh
+NAME=provisioned2023
+for VMID in $(vim-cmd vmsvc/getallvms |  awk '{print $1 "    " $2 "\n"}' | grep ccdc23 | cut -b -3); do
+        SNAPSHOT=$(vim-cmd vmsvc/snapshot.get $VMID | sed 's/-*//' | grep -A1 $NAME | tail -n 1 | awk '{print $4}')
+        echo "vim-cmd vmsvc/snapshot.revert $VMID $SNAPSHOT true" >> reset_everything
+        echo "vim-cmd vmsvc/power.on $VMID" >> reset_everything
+done

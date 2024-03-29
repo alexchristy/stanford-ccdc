@@ -1,0 +1,5 @@
+CREATE DATABASE fleet;
+
+ALTER USER "root"@"localhost" IDENTIFIED WITH mysql_native_password BY "PASTE_YOUR_PASSWORD_HERE";
+
+FLUSH PRIVILEGES;

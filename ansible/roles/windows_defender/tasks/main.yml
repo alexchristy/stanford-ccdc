@@ -1,0 +1,4 @@
+# TODO disable exclusions via GPO
+# TODO ensure windows defender is always enabled in as many ways as possible
+# TODO prevent users from disabling defender
+# TODO find a way to run scans in a loop?

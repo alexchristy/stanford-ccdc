@@ -1,0 +1,27 @@
+- name: Remove suid bit from pkexec
+  file:
+    path: /usr/bin/pkexec
+    mode: '0644'
+
+# Disabling unprivileged user namespaces provides protection against CVE-2024-1086
+
+# Docker uses unprivileged namespaces, so this protection cannot
+# be applied for hosts running Docker
+# - name: Check if Docker is running
+#   ansible.builtin.command: pgrep docker
+#   register: docker_is_running
+#   ignore_errors: true
+
+- name: Disable unprivileged user namespaces (Debian)
+  ansible.posix.sysctl:
+    name: "kernel.unprivileged_userns_clone"
+    value: '0'
+  # when: (ansible_os_family == 'Debian') and (docker_is_running is failed)
+  when: ansible_os_family == 'Debian'
+
+- name: Disable user namespaces (RedHat and Slackware)
+  ansible.posix.sysctl:
+    name: user.max_user_namespaces
+    value: '0'
+  # when: ((ansible_os_family == 'RedHat') or (ansible_os_family == 'Slackware')) and (docker_is_running is failed)
+  when: (ansible_os_family == 'RedHat') or (ansible_os_family == 'Slackware')
